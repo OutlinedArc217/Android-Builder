@@ -9,9 +9,9 @@
     },
     "toolchains": [
       {
-        "name": "proton-clang",
-        "repo": "https://github.com/kdrag0n/proton-clang",
-        "branch": "master",
+        "name": "gcc",
+        "repo": "https://mirrors.bfsu.edu.cn/git/AOSP/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
+        "branch": "android-10.0.0_r32",
         "binaryEnv": ["./bin"]
       }
     ],
