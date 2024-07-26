@@ -1,0 +1,43 @@
+[
+  {
+    "kernelSource": {
+      "name": "kali",
+      "repo": "https://github.com/OutlinedArc217/kernel_oppo_a33f",
+      "branch": "main",
+      "device": "a33f",
+      "defconfig": "defconfig"
+    },
+    "toolchains": [
+        "name": "proton-clang",
+        "repo": "https://github.com/kdrag0n/proton-clang",
+        "branch": "master",
+        "binaryEnv": ["./bin"]
+      {
+        "name": "",
+        "url": "",
+        "binaryEnv": []
+      }
+    ],
+    "enableCcache": true,
+    "params":{
+      "ARCH": "arm64",
+      "CC": "ccache clang",
+      "externalCommands": {
+        "CROSS_COMPILE": "aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+        "CLANG_TRIPLE": "aarch64-linux-gnu-",
+        "AR": "llvm-ar",
+        "NM": "llvm-nm",
+        "OBJCOPY": "llvm-objcopy",
+        "OBJDUMP": "llvm-objdump",
+        "STRIP": "llvm-strip"
+}
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true
+    },
+    "enableKernelSU": false,
+    "enableLXC": true
+  }
+]
