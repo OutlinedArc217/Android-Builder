@@ -1,34 +1,33 @@
 [
-  {
-    "kernelSource": {
-      "name": "kali",
-      "repo": "https://github.com/OutlinedArc217/kernel_oppo_a33f",
-      "branch": "main",
-      "device": "a33f",
-      "defconfig": "a33f_defconfig"
-    },
-    "toolchains": [
-      {
-        "name": "gcc",
-        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
-        "branch": "main",
-        "binaryEnv": ["./bin"]
-      }
-    ],
-    "enableCcache": false,
-    "params": {
-      "ARCH": "arm64",
-      "CC": "gcc",
-      "externalCommands": {
-        "CROSS_COMPILE": "aarch64-linux-android-",
-        "CROSS_COMPILE_ARM32": "aarch64-linux-android-4.9/arm-linux-androideabi-",
-      }
-    },
-    "AnyKernel3": {
-      "use": true,
-      "release": true
-    },
-    "enableKernelSU": false,
-    "enableLXC": true
-  }
+    {
+        "kernelSource": {
+            "name": "kali",
+            "repo": "https://github.com/OutlinedArc217/kernel_oppo_a33f",
+            "branch": "main",
+            "device": "a33f",
+            "defconfig": "a33f_defconfig"
+        },
+        "toolchains": [
+            {
+                "name": "gcc",
+                "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
+                "branch": "main",
+                "binaryEnv": ["./bin"]
+            }
+        ],
+        "enableCcache": false,
+        "params": {
+            "ARCH": "arm64",
+            "CC": "gcc",
+            "externalCommands": {
+                "CROSS_COMPILE": "aarch64-linux-android-",
+            }
+        },
+        "AnyKernel3": {
+            "use": true,
+            "release": true
+        },
+        "enableKernelSU": false,
+        "enableLXC": true
+    }
 ]
