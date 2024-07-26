@@ -5,7 +5,7 @@
       "repo": "https://github.com/OutlinedArc217/kernel_oppo_a33f",
       "branch": "main",
       "device": "a33f",
-      "defconfig": "defconfig"
+      "defconfig": "a33f_defconfig"
     },
     "toolchains": [
       {
@@ -14,11 +14,9 @@
         "branch": "master",
         "binaryEnv": ["./bin"]
       }
-    ]
-  }
-],
+    ],
     "enableCcache": true,
-    "params":{
+    "params": {
       "ARCH": "arm64",
       "CC": "ccache clang",
       "externalCommands": {
@@ -30,7 +28,7 @@
         "OBJCOPY": "llvm-objcopy",
         "OBJDUMP": "llvm-objdump",
         "STRIP": "llvm-strip"
-}
+      }
     },
     "AnyKernel3": {
       "use": true,
