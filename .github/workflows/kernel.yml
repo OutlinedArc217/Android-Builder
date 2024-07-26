@@ -87,6 +87,12 @@ jobs:
       # Install prerequisites for Ubuntu
       - name: ⭐ Install prerequisites
         run: |
+          export ARCH=arm64
+          export SUBARCH=arm64
+          export KBUILD_BUILD_HOST=kali
+          export KBUILD_BUILD_USER=root
+          export LOCALVERSION=-NetHunter
+          mkdir out
           sudo apt-get update
           sudo apt-get install -y curl git ftp lftp wget libarchive-tools ccache python2 python2-dev python3
           sudo apt-get install -y pngcrush schedtool dpkg-dev liblz4-tool make optipng maven device-tree-compiler 
