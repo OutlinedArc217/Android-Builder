@@ -9,20 +9,19 @@
     },
     "toolchains": [
       {
-        "name": "proton-clang",
-        "repo": "https://github.com/kdrag0n/proton-clang",
-        "branch": "master",
+        "name": "gcc",
+        "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
+        "branch": "main",
         "binaryEnv": ["./bin"]
       }
     ],
-    "enableCcache": true,
+    "enableCcache": false,
     "params": {
       "ARCH": "arm64",
-      "CC": "ccache clang",
+      "CC": "gcc",
       "externalCommands": {
-        "CROSS_COMPILE": "proton-clang/bin/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "proton-clang/bin/arm-linux-gnueabi-",
-        "CLANG_TRIPLE": "aarch64-linux-gnu-"
+        "CROSS_COMPILE": "aarch64-linux-android-",
+        "CROSS_COMPILE_ARM32": "aarch64-linux-android-4.9/arm-linux-androideabi-",
       }
     },
     "AnyKernel3": {
