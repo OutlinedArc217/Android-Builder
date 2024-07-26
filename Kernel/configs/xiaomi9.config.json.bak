@@ -1,14 +1,13 @@
 [
   {
     "kernelSource": {
-      "name": "Xiaomi9KernelPoweredBySeparate",
-      "repo": "https://github.com/Separatee/AllinOneKernel",
+      "name": "kali",
+      "repo": "https://github.com/OutlinedArc217/kernel_oppo_a33f",
       "branch": "main",
-      "device": "cepheus",
-      "defconfig": "cepheus_defconfig"
+      "device": "a33f",
+      "defconfig": "defconfig"
     },
     "toolchains": [
-      {
         "name": "proton-clang",
         "repo": "https://github.com/kdrag0n/proton-clang",
         "branch": "master",
@@ -21,20 +20,25 @@
       }
     ],
     "enableCcache": true,
-    "params": {
+    "params":{
       "ARCH": "arm64",
-      "CC": "clang",
+      "CC": "ccache clang",
       "externalCommands": {
-        "CROSS_COMPILE": "proton-clang/bin/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "proton-clang/bin/arm-linux-gnueabi-",
-        "CLANG_TRIPLE": "aarch64-linux-gnu-"
-      }
+        "CROSS_COMPILE": "aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
+        "CLANG_TRIPLE": "aarch64-linux-gnu-",
+        "AR": "llvm-ar",
+        "NM": "llvm-nm",
+        "OBJCOPY": "llvm-objcopy",
+        "OBJDUMP": "llvm-objdump",
+        "STRIP": "llvm-strip"
+}
     },
     "AnyKernel3": {
-      "use": false,
+      "use": true,
       "release": true
     },
     "enableKernelSU": false,
-    "enableLXC": false
+    "enableLXC": true
   }
 ]
