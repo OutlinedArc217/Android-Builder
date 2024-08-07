@@ -2,10 +2,10 @@
     {
         "kernelSource": {
             "name": "kali",
-            "repo": "https://github.com/OutlinedArc217/kernel_oppo_a33f",
-            "branch": "main",
-            "device": "a33f",
-            "defconfig": "a33f_defconfig"
+            "repo": "https://github.com/OutlinedArc217/oppo-a33",
+            "branch": "master",
+            "device": "a33",
+            "defconfig": "defconfig"
         },
         "toolchains": [
             {
